@@ -48,7 +48,7 @@ This is the Express.js and MongoDB backend powering the YouTube Clone project.
 ## 📁 Folder Structure
 
 ```
-backend/
+youtube_clone_backend/
 ├── config/        # MongoDB connection
 ├── controllers/   # Business logic
 ├── middleware/    # Upload & auth middleware
@@ -66,9 +66,8 @@ backend/
 ## ⚙️ Local Setup
 
 ```bash
-cd backend
+cd youtube_clone_backend
 npm install
-npm run seed
 npm run dev
 ```
 
@@ -77,6 +76,8 @@ npm run dev
 ---
 
 ## 🔁 Seeder Instructions
+
+### Note: Optional (npm run dev will seed the data automatically.)
 
 ```bash
 npm run seed
