@@ -4,6 +4,8 @@ import Video from "../models/Video.js";
 import User from "../models/User.js";
 import { v4 as uuidv4 } from "uuid";
 
+const baseUrl = "https://youtube-clone-backend-mh6t.onrender.com"
+
 /**
  * @function getAllVideos
  * @description Fetch all videos from the database.
@@ -60,9 +62,9 @@ export const uploadVideo = async (req, res) => {
       title,
       description,
       uploader: req.user.id,
-      videoUrl: `http://localhost:5000/${videoFile.path}`,
+      videoUrl: `${baseUrl}/${videoFile.path}`,
       thumbnailUrl: thumbnailFile
-        ? `http://localhost:5000/${thumbnailFile.path}`
+        ? `${baseUrl}/${thumbnailFile.path}`
         : "",
       uploadDate: new Date(),
       views: [],
