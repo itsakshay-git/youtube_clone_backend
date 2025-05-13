@@ -11,8 +11,39 @@ This is the Express.js and MongoDB backend powering the YouTube Clone project.
 ---
 
 ## Live Link for Frontend and backend
+
 - [live link frontend](https://youtube-clone-frontend-indol.vercel.app/)
 - [live link backend](https://youtube-clone-backend-mh6t.onrender.com)
+
+---
+
+## Features
+
+- 🔐 Auth (Register/Login)
+- 📺 Video Upload, Playback
+- 📁 Playlists & Watch Later
+- 🧠 Video History
+- 📦 Channel Management
+- 🧾 Commenting System
+- 🔍 Search with Suggestions
+- ❤️ Like/Dislike, Subscribe
+- 📊 Redux State Management
+- 🌩️ Cloudinary for Image/Video Storage
+
+---
+
+## Usage
+
+- Explore videos on the home page
+- Register or Login to upload videos and comment
+- Create and manage your own channel
+- Subscribe to other channels
+- Like/Dislike videos
+- Save videos to playlists or watch later
+- View your watch history and liked videos
+- Search for content with real-time suggestions
+
+---
 
 ## 📁 Folder Structure
 
