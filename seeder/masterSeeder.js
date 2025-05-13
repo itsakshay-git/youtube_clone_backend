@@ -4,31 +4,28 @@ import { seedUsers } from "./userSeeder.js";
 import { seedVideos } from "./videoSeeder.js";
 import { seedChannels } from "./channelSeeder.js";
 import Channel from "../models/Channel.js";
+import Seeder from "../models/Seeder.js";
 
 dotenv.config();
 
-const runAllSeeders = async () => {
+export const runAllSeeders = async () => {
   try {
-    await mongoose.connect(process.env.MONGO_URI);
-    console.log("Connected to DB");
+    const existing = await Seeder.findOne();
+    if (existing?.isSeeded) {
+      console.log("Seeding already completed. Skipping...");
+      return;
+    }
 
-    // 1. Seed Users
+    console.log("Running seeders...");
     const users = await seedUsers();
-
-    // Step 2: Seed channels and link them to users
     await seedChannels(users);
-
-    // Step 3: Seed videos and link them to channels
-    const channels = await Channel.find();  // Fetch created channels
+    const channels = await Channel.find();
     await seedVideos(users, channels);
 
+    await Seeder.create({ isSeeded: true });
 
-    console.log("All seeders completed successfully!");
-    process.exit(0);
+    console.log("Seeding completed.");
   } catch (error) {
     console.error("Seeding failed:", error);
-    process.exit(1);
   }
 };
-
-runAllSeeders();

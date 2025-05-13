@@ -9,6 +9,7 @@ import usersRoutes from "./routes/user.routes.js";
 import searchRoutes from "./routes/search.route.js";
 import commentsRoutes from "./routes/comments.route.js";
 import connectDB from "./config/db.js";
+import { runAllSeeders } from "./seeder/masterSeeder.js";
 
 dotenv.config();
 const PORT = process.env.PORT || 5000;
@@ -39,6 +40,7 @@ app.use("/api/users", usersRoutes);
 app.use("/api/search", searchRoutes);
 
 //  Connects to the database and starts the Express server.
-connectDB().then(() => {
+connectDB().then(async () => {
+  await runAllSeeders();
   app.listen(PORT, () => console.log("Server running on port 5000"));
 });
