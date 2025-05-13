@@ -24,6 +24,8 @@ const allowedOrigins = [
   "http://localhost:5173",
   "https://youtube-clone-frontend-indol.vercel.app",
 ];
+
+// cors
 app.use(
   cors({
     origin: allowedOrigins,
