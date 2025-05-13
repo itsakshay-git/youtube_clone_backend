@@ -10,8 +10,9 @@ This is the Express.js and MongoDB backend powering the YouTube Clone project.
 
 ---
 
-## Live Link for Frontend
-- [](https://youtube-clone-frontend-indol.vercel.app/)
+## Live Link for Frontend and backend
+- [live link frontend](https://youtube-clone-frontend-indol.vercel.app/)
+- [live link backend](https://youtube-clone-backend-mh6t.onrender.com)
 
 ## 📁 Folder Structure
 
