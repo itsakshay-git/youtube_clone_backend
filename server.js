@@ -20,7 +20,7 @@ const app = express();
  * Middleware setup for CORS (Cross-Origin Resource Sharing).
  * Allows requests from specified origins and enables credentials to be included.
  */
-const allowedOrigins = ["http://localhost:5173", "youtube-clone-frontend-indol.vercel.app"];
+const allowedOrigins = ["http://localhost:5173", "https://youtube-clone-frontend-indol.vercel.app"];
 app.use(
   cors({
     origin: allowedOrigins,
