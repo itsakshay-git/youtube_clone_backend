@@ -4,6 +4,11 @@ This is the Express.js and MongoDB backend powering the YouTube Clone project.
 
 ---
 
+## live video demo
+- [live video demo google drive link](https://drive.google.com/file/d/1SyE613ujzAk7ZCsOLWbPXfx74hEX-UMs/view?usp=drive_link)
+
+---
+
 ## Git Repositories
 
 - [Backend Github Repo](https://github.com/itsakshay-git/youtube_clone_backend)
