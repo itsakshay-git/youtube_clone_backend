@@ -6,7 +6,7 @@ This is the Express.js and MongoDB backend powering the YouTube Clone project.
 
 ## Git Repositories
 
-- [Backend Repo](./backend)
+- [Backend Github Repo](https://github.com/itsakshay-git/youtube_clone_backend)
 
 ---
 
